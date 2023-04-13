@@ -1,0 +1,69 @@
+.content > .box
+    padding: 15px
+
+.content > .box > .title
+    font-size: 18px
+
+.content .cat
+    padding: 15px
+
+.content.premium:before
+    content: "Premium Box"
+
+.content.premium:hover
+  background-color: #eee
+
+.class > .child
+    padding: 10px
+
+.class
+    font-weight: bold
+    font-size: 20px
+
+.widget, .my-class
+    background-color: white
+    padding: 20px
+
+.main-border, .my-class
+    border: 1px solid #CCC
+
+.my-class
+   background-color: white
+   padding: 20px
+
+.my-class
+   border: 1px solid #CCC
+
+.my-class
+   font-weight: bold
+   margin: 20px auto
+
+.box h2, .box p
+    font-size: 20px
+
+@media (max-width: 575px)
+    .box h2, .box p
+        font-size: 16px
+
+    .box h2 span, .box p span
+        font-weight: bold
+
+$red: #e91e63
+$green: #009688
+
+$link-color: $red
+$link-hover: $green
+
+.box a
+  color: $link-color
+  &:hover
+    color: $link-hover
+
+.box
+    font-size: 20px
+
+.box-holder
+    width: 1000px
+
+.box-holder-content
+    margin: auto
