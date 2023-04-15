@@ -1,0 +1,71 @@
+$main: "school";
+$child: "box";
+$language: "en"; // English
+$gap: 20px;
+
+.#{$main} {
+    padding: $gap;
+
+    @if ($language =="en") {
+        direction: ltr;
+    }
+
+    @else if ($language =="ar") {
+        direction: rtl;
+    }
+
+    margin-left: $gap;
+}
+
+.#{$main} .#{$main}-#{$child} {
+    padding: 10px;
+}
+
+.#{$main}:hover .#{$main}-#{$child} {
+    background-color: #eee;
+}
+
+$number: 5;
+
+@if ($number > 8) {
+    .class {
+        color: blue;
+    }
+}
+
+@else if ($number > 5) {
+    .class {
+        color: green;
+    }
+}
+
+@else {
+    .class {
+        color: red;
+    }
+}
+
+$my_number: 10;
+$color: red;
+$theme: light;
+
+@if ($my_number > 5 && $color ==red && $theme !="dark") {
+    .class {
+        color: red;
+    }
+}
+
+$louk_number: 9;
+
+@if ($louk_number ==10) {
+    .box {
+        background-color: #EEE;
+        text-align: center;
+    }
+}
+
+@else if ($louk_number ==9) {
+    .box {
+        background-color: #EEE;
+    }
+}
