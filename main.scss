@@ -69,3 +69,73 @@ $louk_number: 9;
         background-color: #EEE;
     }
 }
+
+@mixin arrow($top) {
+    content: "";
+    position: absolute;
+    border: 20px solid transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -40px;
+    border-bottom-color: red;
+}
+
+.element {
+    &:before {
+        @include arrow("top");
+    }
+}
+
+@mixin arrow($right) {
+    content: "";
+    position: absolute;
+    border: 20px solid transparent;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -40px;
+    border-left-color: red;
+}
+
+.element {
+    &:before {
+        @include arrow("right");
+    }
+}
+
+@mixin arrow($bottom) {
+    content: "";
+    position: absolute;
+    border: 20px solid transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -40px;
+    border-top-color: red;
+}
+
+.element {
+    &:before {
+        @include arrow("bottom");
+    }
+}
+
+@mixin arrow($left) {
+    content: "";
+    position: absolute;
+    border: 20px solid transparent;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -40px;
+    border-right-color: red;
+}
+
+.element {
+    &:before {
+        @include arrow("left");
+    }
+}
+
+@for $i from 1 through 16 {
+    .col-#{$i} {
+        width: $i * 6.25%;
+    }
+}
